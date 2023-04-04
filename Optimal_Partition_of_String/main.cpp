@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Partition.hpp"
 
 int	main(int argc, char **argv)
 {
@@ -9,7 +9,7 @@ int	main(int argc, char **argv)
 	}
 	std::string arg = argv[1];
 
-	Solution obj;
+	Partition obj;
 	std::cout << obj.partitionString(arg) << std::endl;
 	
 	return 0;

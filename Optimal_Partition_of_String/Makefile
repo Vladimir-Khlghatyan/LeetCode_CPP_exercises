@@ -3,7 +3,7 @@ OBJS 		= ${SRCS:.cpp=.o}
 CC			= c++
 RM			= rm -f
 CPPFLAGS		= -Wall -Wextra -Werror -std=c++2a
-NAME		= solution
+NAME		= partition
 
 %.o: %.cpp *.hpp
 			@$(CC) ${CPPFLAGS} -c $< -o $@

@@ -1,6 +1,6 @@
-#include "Solution.hpp"
+#include "Partition.hpp"
 
-int	Solution::partitionString(std::string &str)
+int	Partition::partitionString(std::string &str)
 {
 	std::unordered_set<char> letters;
 	int substrings = 1;

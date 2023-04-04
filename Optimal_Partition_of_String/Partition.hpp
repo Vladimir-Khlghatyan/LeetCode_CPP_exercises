@@ -1,11 +1,11 @@
-#ifndef SOLUTION_HPP
-# define SOLUTION_HPP
+#ifndef PARTITION_HPP
+# define PARTITION_HPP
 
 # include <iostream>
 # include <string>
 # include <unordered_set>
 
-class Solution
+class Partition
 {
 	public:
 		int		partitionString(std::string &str);
