@@ -2,20 +2,26 @@
 
 int	Solution::minimizeArrayValue(std::vector<int> &nums)
 {
-	bool flag = true;
-	size_t i = 1;
+	size_t	steps = 0;
+	size_t	i = 1;
 	while (true)
 	{
-		if (flag == false)
+		if (nums[0] == *(std::max_element(nums.begin(), nums.end())))
+			return (nums[0]);
+		if (i == nums.size() && steps == nums.size() - 1)
 			break ;
-		flag = false;
 		if (i == nums.size())
-			i = 1 ;
+		{
+			steps = 0;
+			i = 1;
+		}
+		if (isValidOperation(nums, i) == false)
+			steps++;
 		while (isValidOperation(nums, i) == true)
-			flag = true;
+			;
+		printNums(nums);
 		++i;
 	}
-	printNums(nums);
 	auto max_value = std::max_element(nums.begin(), nums.end());
 	return *max_value;
 }
