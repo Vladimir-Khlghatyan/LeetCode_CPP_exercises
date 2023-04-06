@@ -2,7 +2,7 @@ SRCS		= ${wildcard ./*.cpp}
 OBJS 		= ${SRCS:.cpp=.o}
 CC			= c++
 RM			= rm -f
-CPPFLAGS		= -Wall -Wextra -Werror -std=c++2a
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++2a
 NAME		= minimizeArrayValue
 
 %.o: %.cpp *.hpp

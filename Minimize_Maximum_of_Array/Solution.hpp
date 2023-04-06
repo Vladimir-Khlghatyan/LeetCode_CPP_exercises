@@ -3,16 +3,13 @@
 
 # include <iostream>
 # include <vector>
-# include <cstdlib>
+# include <cmath>
 
 class Solution
 {
 	public:
-		int		minimizeArrayValue(std::vector<int> &nums);
-
-	public:
-		bool	isValidOperation(std::vector<int> &nums, int index);
-		void	printNums(std::vector<int> &nums) const;
+		int minimizeArrayValue(std::vector<int> &nums);
+		
 };
 
 #endif
