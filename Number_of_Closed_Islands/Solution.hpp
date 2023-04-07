@@ -8,8 +8,10 @@
 class Solution
 {
 	public:
-		bool island(vector<vector<int>> &grid, int i, int j);
-		int closedIsland(vector<vector<int>> &grid);
+		int closedIsland(std::vector<std::vector<int>> &grid);
+
+	private:
+		bool island(std::vector<std::vector<int>> &grid, size_t i, size_t j);
 };
 
 #endif
