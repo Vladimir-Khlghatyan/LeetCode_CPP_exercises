@@ -1,6 +1,7 @@
 #include "Solution.hpp"
 
-int Solution::closedIsland(std::vector<std::vector<int>>& grid) {
+int Solution::closedIsland(std::vector<std::vector<int>>& grid)
+{
 	int count = 0;
 	for(size_t i = 0; i < grid.size(); i++)
 		for(size_t j = 0; j < grid[i].size(); j++)
