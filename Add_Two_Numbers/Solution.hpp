@@ -4,6 +4,8 @@
 # include <iostream>
 # include <vector>
 # include <string>
+# include <cstdlib>
+# include <sys/time.h>
 
 struct ListNode
 {
@@ -18,6 +20,9 @@ class Solution
 {
 	public:
 		ListNode *addTwoNumbers(ListNode *l1, ListNode *l2);
+		ListNode *createRandomList(void);
+		void printLst(const std::string &msg, ListNode *lst);
+		void deleteLst(ListNode *lst);
 };
 
 #endif
