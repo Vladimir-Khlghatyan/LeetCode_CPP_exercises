@@ -3,33 +3,21 @@
 std::string Solution::simplifyPath(std::string &path)
 {
 	std::vector<std::string>	tokens = split(path, '/');
-	std::stack<std::string>		st1;
-	std::stack<std::string>		st2;
+	std::vector<std::string> 	simpleTokens;
 	std::string 				shortPath;
 
 	for (std::vector<std::string>::iterator it = tokens.begin(); it != tokens.end(); ++it)
 	{
-		if (*it == ".." && !st1.empty())
-			st1.pop();
+		if (*it == ".." && !simpleTokens.empty())
+			simpleTokens.pop_back();
 		else if (*it != "." && *it != "..")
-			st1.push(*it);
+			simpleTokens.push_back(*it);
 	}
 
-	while (!st1.empty())
-	{
-		st2.push(st1.top());
-		st1.pop();
-	}
+	for (std::vector<std::string>::iterator it = simpleTokens.begin(); it != simpleTokens.end(); ++it)
+		shortPath += "/" + *it;
 
-	while (!st2.empty())
-	{
-		shortPath += "/" + st2.top();
-		st2.pop();
-	}
-
-	if (shortPath.empty())
-		shortPath = "/";
-	return shortPath;
+	return shortPath.empty() ? static_cast<std::string>("/") : shortPath;
 }
 
 std::vector<std::string> Solution::split(const std::string &str, char c)
