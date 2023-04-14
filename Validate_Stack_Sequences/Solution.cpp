@@ -3,27 +3,21 @@
 bool Solution::validateStackSequences(std::vector<int> &pushed, std::vector<int> &popped)
 {
 	std::stack<int> pushedStack;
-	std::stack<int> poppedStack;	
+	std::stack<int> poppedStack;
 
 	for (auto it = popped.rbegin(); it != popped.rend(); ++it)
 		poppedStack.push(*it);
 
-	for (auto it = pushed.rbegin(); it != pushed.rend(); ++it)
+	for (auto it = pushed.begin(); it != pushed.end(); ++it)
 	{
-		if (!pushedStack.empty() && !poppedStack.empty() && \
-			pushedStack.top() == poppedStack.top())
+		pushedStack.push(*it);
+		while (!pushedStack.empty() && !poppedStack.empty() &&\
+				pushedStack.top() == poppedStack.top())
 		{
 			pushedStack.pop();
 			poppedStack.pop();
 		}
-
-		if (*it == poppedStack.top())
-			poppedStack.pop();
-		else
-			pushedStack.push(*it);
 	}
-	if (pushedStack.size() > 1)
-		return false;
 	return stacksAreEqual(pushedStack, poppedStack) ? true : false;
 }
 
