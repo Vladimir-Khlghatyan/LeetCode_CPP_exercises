@@ -1,5 +1,7 @@
 Removing Stars From a String
---------------------------------
+---------------------------------
+Difficulty: medium
+---------------------------------
 
 You are given a string s, which contains stars *.
 

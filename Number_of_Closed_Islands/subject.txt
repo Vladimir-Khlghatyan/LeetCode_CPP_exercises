@@ -1,5 +1,7 @@
 Number of Closed Islands
------------------------------
+--------------------------------
+Difficulty: medium
+--------------------------------
 
 Given a 2D grid consists of 0s (land) and 1s (water).
 An island is a maximal 4-directionally connected group of 0s and a closed

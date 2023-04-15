@@ -1,5 +1,7 @@
 Minimize Maximum of Array
------------------------------
+--------------------------------
+Difficulty: medium
+--------------------------------
 
 You are given a 0-indexed array nums comprising of n non-negative integers.
 
