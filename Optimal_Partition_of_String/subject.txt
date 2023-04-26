@@ -23,5 +23,5 @@ Explanation:
 The only valid partition is ("s","s","s","s","s","s").
  
 Constraints:
-1 <= s.length <= 105
+1 <= s.length <= 10^5
 s consists of only English lowercase letters.
